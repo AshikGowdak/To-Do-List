@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page Layout */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  color: #333;
+}
+
+.container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Input Grid */
+.todo-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 160px auto;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.name-input,
+.date-input {
+  font-size: 1rem;
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.name-input:focus,
+.date-input:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 6px rgba(108, 99, 255, 0.4);
+}
+
+/* Buttons */
+.add-button,
+.delete-button {
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.add-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background-color: #e53935;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+}
+
+/* To-Do List Grid */
+.todo-grid {
+  display: grid;
+  grid-template-columns: 1fr 160px auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.todo-grid > div {
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .todo-input-grid,
+  .todo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-button,
+  .delete-button {
+    width: 100%;
+  }
+}
